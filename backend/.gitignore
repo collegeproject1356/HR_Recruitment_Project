@@ -58,7 +58,7 @@ coverage/
 *.tgz
 *.bak
 
-# Database files (if local)
+# Database files 
 
 *.sqlite
 *.db
