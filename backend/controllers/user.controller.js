@@ -105,7 +105,12 @@ export const createHRAccount = async (req, res) => {
 
 export const logout = async (req, res) => {
     try {
-        return res.status(200).cookie("token", "", { maxAge: 0 }).json({
+        return res.status(200).cookie("token", "", { 
+            maxAge: 0,
+            httpOnly: true,
+            sameSite: "none", 
+            secure: true     
+        }).json({
             message: "You have logged out successfully.",
             success: true
         });
@@ -153,7 +158,12 @@ export const deleteUser = async (req, res) => {
     try {
         const userId = req.id;
         await User.findByIdAndDelete(userId);
-        return res.status(200).cookie("token", "", { maxAge: 0 }).json({ message: "Account deleted permanently.", success: true });
+        return res.status(200).cookie("token", "", { 
+            maxAge: 0,
+            httpOnly: true,
+            sameSite: "none", 
+            secure: true
+        }).json({ message: "Account deleted permanently.", success: true });
     } catch (error) {
         console.log(error);
         res.status(500).json({ message: "Server error", success: false });
