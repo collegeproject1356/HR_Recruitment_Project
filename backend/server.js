@@ -8,7 +8,7 @@ import jobRoute from "./routes/job.route.js";
 import applicationRoute from "./routes/application.route.js";
 
 dotenv.config();
-
+app.set("trust proxy", 1);
 const app = express();
 
 app.use(express.json()); 
