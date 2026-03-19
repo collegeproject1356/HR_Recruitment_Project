@@ -1,4 +1,4 @@
-export const USER_API_END_POINT = "https://hr-recruitment-project.onrender.com/api/users";
-export const JOB_API_END_POINT = "https://hr-recruitment-project.onrender.com/api/jobs";
-export const APPLICATION_API_END_POINT = "https://hr-recruitment-project.onrender.com/api/applications";
+export const USER_API_END_POINT = "https://hr-recruitment-project-blond.vercel.app/api/users";
+export const JOB_API_END_POINT = "https://hr-recruitment-project-blond.vercel.app/api/jobs";
+export const APPLICATION_API_END_POINT = "https://hr-recruitment-project-blond.vercel.app/api/applications";
 
