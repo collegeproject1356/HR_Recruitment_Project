@@ -10,7 +10,7 @@ import applicationRoute from "./routes/application.route.js";
 dotenv.config();
 const app = express();
 app.set("trust proxy", 1);
-
+connectDB();
 app.use(express.json()); 
 app.use(cookieParser()); 
 app.use(cors({
@@ -25,6 +25,6 @@ app.use("/api/jobs", jobRoute);
 app.use("/api/applications", applicationRoute);
 
 app.listen(PORT, () => {
-    connectDB(); 
+     
     console.log(` Server is running on Port: ${PORT}`);
 });
